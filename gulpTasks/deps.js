@@ -17,9 +17,7 @@ gulp.task('deps.js', function() {
             'node_modules/admin-lte/dist/js/app.min.js'
         ])
         .pipe(concat('deps.min.js'))
-        .pipe(uglify().on('error', function(e) {
-            console.log(e);
-        }))
+        .pipe(uglify())
         .pipe(gulp.dest('public/assets/js'))
 })
 
@@ -32,7 +30,7 @@ gulp.task('deps.css', function() {
             'node_modules/admin-lte/dist/css/skins/_all-skins.min.css'
         ])
         .pipe(concat('deps.min.css'))
-        .pipe(uglify({ "uglyComments": true }))
+        .pipe(uglifycss({ "uglyComments": true }))
         .pipe(gulp.dest('public/assets/css'))
 })
 
