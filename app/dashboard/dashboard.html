@@ -1,1 +1,7 @@
-<h1>Dashboard</h1>
+<content-header title="Dashboard" subtitle="Versão 1.0"></content-header>
+
+<section class="content" ng-controller="DashboardCtrl">
+    <value-box grid="4" color-class="bg-green" value="R$ {{ credit | number:2 }}" title="Total de Créditos" icon-class="fa-bank"></value-box>
+    <value-box grid="4" color-class="bg-red" value="R$ {{ debt | number:2 }}" title="Total de Débitos" icon-class="fa-credit-card"></value-box>
+    <value-box grid="4" color-class="bg-blue" value="R$ {{ total | number:2 }}" title="Saldo" icon-class="fa-money"></value-box>
+</section>
